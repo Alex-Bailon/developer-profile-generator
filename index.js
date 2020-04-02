@@ -6,8 +6,13 @@ inquirer
     .prompt([
         {
         type: 'input',
-        message: 'What is your user name?',
+        message: 'What is the GitHub user name?',
         name: 'username'
+        },
+        {
+            type: 'input',
+            message: 'What is your favorite color?',
+            name: 'color'
         }
     ])
     .then(({username}) => {
@@ -27,7 +32,6 @@ inquirer
                 userFollowing: res.data.following
             }
 
-            console.log(userData.userimg)
         })
     })
     .catch(error => {
